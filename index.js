@@ -33,7 +33,7 @@ app.use('/api/items', itemRoutes);
 
 // Basic route
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+  res.send('Hello, World!');
 });
 
 // Start the server
