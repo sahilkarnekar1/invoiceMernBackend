@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors'); // Import cors
@@ -9,7 +10,7 @@ app.use(express.json());
 app.use(cors()); // Use cors middleware
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://invoice:tuVzNAEydUGiEJBb@cluster0.pyhi6xj.mongodb.net/invoice', {
+mongoose.connect(process.env.MONGODB_URL , {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
